@@ -11,13 +11,25 @@ updates:
       interval: "monthly"
     versioning-strategy: "increase-if-necessary"
     groups:
-      # Storybook dependencies should all have the same version, an older
-      # version of storybook will complain about @storybook/* versions if
-      # these lag behind
-      storybook:
-        patterns:
-          - "@storybook/*"
-          - "storybook"
+      patch-and-minor-dependencies:
+        applies-to: "version-updates"
+        update-types:
+          - "patch"
+          - "minor"
+    ignore:
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "@types/react"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "@types/react-dom"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "react"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "react-dom"
+        update-types:
+          - "version-update:semver-major"
     open-pull-requests-limit: 20
-    reviewers:
-      - "nl-design-system/kernteam-dependabot"
