@@ -8,9 +8,10 @@
     "nl-design-system"
   ],
   "private": true,
+  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971",
   "engines": {
-    "node": "^20",
-    "pnpm": "^9"
+    "node": "^22",
+    "pnpm": "^10"
   },
   "workspaces": [
     "./packages/*",
@@ -76,6 +77,5 @@
   },
   "dependencies": {
     "http-server": "14.1.1"
-  },
-  "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74"
+  }
 }
